@@ -3,14 +3,14 @@
  */
 package com.allendowney.thinkdast;
 
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.CoreMatchers.*;
-
-import java.io.IOException;
-
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.Test;
+
+import java.io.IOException;
+
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.assertThat;
 
 /**
  * @author downey

@@ -3,18 +3,17 @@
  */
 package com.allendowney.thinkdast;
 
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.CoreMatchers.*;
-
-import java.io.IOException;
-import java.util.Map;
-
 import org.jsoup.select.Elements;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import redis.clients.jedis.Jedis;
+
+import java.io.IOException;
+import java.util.Map;
+
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.assertThat;
 
 /**
  * @author downey

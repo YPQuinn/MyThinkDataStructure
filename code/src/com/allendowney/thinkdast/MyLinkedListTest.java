@@ -3,9 +3,9 @@
  */
 package com.allendowney.thinkdast;
 
-import java.util.ArrayList;
-
 import org.junit.Before;
+
+import java.util.ArrayList;
 
 
 /**

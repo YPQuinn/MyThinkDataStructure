@@ -1,15 +1,13 @@
 package com.allendowney.thinkdast;
 
+import org.jsoup.select.Elements;
+import redis.clients.jedis.Jedis;
+
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
-
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import redis.clients.jedis.Jedis;
 
 
 public class WikiCrawler {

@@ -1,12 +1,12 @@
 package com.allendowney.thinkdast;
 
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.CoreMatchers.*;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.assertThat;
 
 /**
  * @author downey

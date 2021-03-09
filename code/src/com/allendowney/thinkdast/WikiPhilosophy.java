@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 public class WikiPhilosophy {
 
     final static List<String> visited = new ArrayList<String>();

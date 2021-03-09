@@ -1,12 +1,12 @@
 package com.allendowney.thinkdast;
 
+import org.jsoup.select.Elements;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Transaction;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import org.jsoup.select.Elements;
-
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.Transaction;
 
 
 /**

@@ -1,18 +1,14 @@
 package com.allendowney.thinkdast;
 
+import org.jsoup.select.Elements;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Transaction;
+
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-
-import org.jsoup.select.Elements;
-
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.Transaction;
 
 /**
  * Represents a Redis-backed web search index.

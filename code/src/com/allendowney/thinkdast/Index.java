@@ -1,12 +1,12 @@
 package com.allendowney.thinkdast;
 
+import org.jsoup.select.Elements;
+
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.HashSet;
-
-import org.jsoup.select.Elements;
 
 /**
  * Encapsulates a map from search term to set of TermCounter.

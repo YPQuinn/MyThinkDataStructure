@@ -1,11 +1,10 @@
 package com.allendowney.thinkdast;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import com.allendowney.thinkdast.Profiler.Timeable;
 import org.jfree.data.xy.XYSeries;
 
-import com.allendowney.thinkdast.Profiler.Timeable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ProfileMapPut {
 	
