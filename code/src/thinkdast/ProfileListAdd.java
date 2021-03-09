@@ -1,12 +1,10 @@
 package thinkdast;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.jfree.data.xy.XYSeries;
+import thinkdast.Profiler.Timeable;
 
-import com.allendowney.thinkdast.Profiler.Timeable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProfileListAdd {
 	
