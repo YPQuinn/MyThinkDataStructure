@@ -1,8 +1,5 @@
 package thinkdast;
 
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +38,5 @@ public class WikiPhilosophy {
      */
     public static void testConjecture(String destination, String source, int limit) throws IOException {
         // TODO: FILL THIS IN!
-        Connection conn = Jsoup.connect(destination);
     }
 }
