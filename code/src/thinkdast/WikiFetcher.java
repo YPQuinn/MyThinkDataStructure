@@ -1,15 +1,15 @@
 package thinkdast;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 
 public class WikiFetcher {
@@ -32,6 +32,8 @@ public class WikiFetcher {
 
 		// select the content text and pull out the paragraphs.
 		Element content = doc.getElementById("mw-content-text");
+		String text = content.wholeText();
+		System.out.println(text);
 
 		// TODO: avoid selecting paragraphs from sidebars and boxouts
 		Elements paras = content.select("p");
@@ -58,6 +60,8 @@ public class WikiFetcher {
 
 		// parse the contents of the file
 		Element content = doc.getElementById("mw-content-text");
+		String text = content.wholeText();
+		System.out.println(text);
 		Elements paras = content.select("p");
 		return paras;
 	}
@@ -87,8 +91,8 @@ public class WikiFetcher {
 	 */
 	public static void main(String[] args) throws IOException {
 		WikiFetcher wf = new WikiFetcher();
-		String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
-		Elements paragraphs = wf.readWikipedia(url);
+		String url = "https://en.wanweibaike.com/wiki-Java%20Programming";
+		Elements paragraphs = wf.fetchWikipedia(url);
 
 		for (Element paragraph: paragraphs) {
 			System.out.println(paragraph);

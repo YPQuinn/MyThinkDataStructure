@@ -14,11 +14,11 @@ import java.util.*;
 public class WikiNodeExample {
 	
 	public static void main(String[] args) throws IOException {
-		String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+		String url = "https://en.wanweibaike.com/wiki-Java%20Programming";
 		
 		// download and parse the document
 		Connection conn = Jsoup.connect(url);
-		Document doc = conn.get();
+		Document doc = conn.timeout(50000).get();
 		
 		// select the content text and pull out the paragraphs.
 		Element content = doc.getElementById("mw-content-text");

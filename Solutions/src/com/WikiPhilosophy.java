@@ -1,11 +1,11 @@
 package com;
 
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 public class WikiPhilosophy {
 
@@ -27,8 +27,8 @@ public class WikiPhilosophy {
 	 */
 	public static void main(String[] args) throws IOException {
 		
-		String destination = "https://en.wikipedia.org/wiki/Philosophy";
-		String source = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+		String destination = "https://en.wanweibaike.com/wiki-Philosophy";
+		String source = "https://en.wanweibaike.com/wiki-Java%20Programming";
 		
 		testConjecture(destination, source, 10);		
 	}
