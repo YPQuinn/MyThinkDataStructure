@@ -28,7 +28,7 @@ public class WikiFetcher {
 
 		// download and parse the document
 		Connection conn = Jsoup.connect(url);
-		Document doc = conn.get();
+		Document doc = conn.timeout(5000).get();
 
 		// select the content text and pull out the paragraphs.
 		Element content = doc.getElementById("mw-content-text");
