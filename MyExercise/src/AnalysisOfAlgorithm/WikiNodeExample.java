@@ -14,7 +14,7 @@ import java.util.*;
 public class WikiNodeExample {
 	
 	public static void main(String[] args) throws IOException {
-		String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+		String url = "https://en.wanweibaike.com/wiki-Java_(programming_language)";
 		
 		// download and parse the document
 		Connection conn = Jsoup.connect(url);

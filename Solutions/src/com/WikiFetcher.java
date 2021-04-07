@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.time.Instant;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -14,7 +15,7 @@ import org.jsoup.select.Elements;
 
 public class WikiFetcher {
 	private long lastRequestTime = -1;
-	private long minInterval = 1000;
+	private long minInterval = 2000;
 
 	/**
 	 * Fetches and parses a URL string, returning a list of paragraph elements.
@@ -72,7 +73,8 @@ public class WikiFetcher {
 			long nextRequestTime = lastRequestTime + minInterval;
 			if (currentTime < nextRequestTime) {
 				try {
-					//System.out.println("Sleeping until " + nextRequestTime);
+					Instant instant = Instant.ofEpochMilli(nextRequestTime);
+					System.out.println("Sleeping until " + instant.toString());
 					Thread.sleep(nextRequestTime - currentTime);
 				} catch (InterruptedException e) {
 					System.err.println("Warning: sleep interrupted in fetchWikipedia.");
@@ -88,7 +90,7 @@ public class WikiFetcher {
 	 */
 	public static void main(String[] args) throws IOException {
 		WikiFetcher wf = new WikiFetcher();
-		String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+		String url = "https://en.wanweibaike.com/wiki-Java_(programming_language)";
 		Elements paragraphs = wf.readWikipedia(url);
 
 		for (Element paragraph: paragraphs) {

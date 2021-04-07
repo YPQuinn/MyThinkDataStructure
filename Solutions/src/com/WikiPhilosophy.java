@@ -26,11 +26,11 @@ public class WikiPhilosophy {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
+
+		String destination = "https://en.wanweibaike.com/wiki-Philosophy";
+		String source = "https://en.wanweibaike.com/wiki-Java_(programming_language)";
 		
-		String destination = "https://en.wikipedia.org/wiki/Philosophy";
-		String source = "https://en.wikipedia.org/wiki/Java_(programming_language)";
-		
-		testConjecture(destination, source, 10);		
+		testConjecture(destination, source, 20);
 	}
 
 	/**
