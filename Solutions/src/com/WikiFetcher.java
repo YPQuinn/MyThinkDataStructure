@@ -1,21 +1,21 @@
 package com;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.time.Instant;
-
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.time.Instant;
+
 
 public class WikiFetcher {
 	private long lastRequestTime = -1;
-	private long minInterval = 3000;
+	private long minInterval = 4000;
 
 	/**
 	 * Fetches and parses a URL string, returning a list of paragraph elements.
