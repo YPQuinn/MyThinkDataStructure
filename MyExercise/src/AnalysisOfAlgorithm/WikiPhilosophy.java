@@ -1,11 +1,17 @@
 package AnalysisOfAlgorithm;
 
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.IOError;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static sun.misc.Version.print;
 
 public class WikiPhilosophy {
 
@@ -26,10 +32,10 @@ public class WikiPhilosophy {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        String destination = "https://en.wanweibaike.com/wiki-Philosophy";
-        String source = "https://en.wanweibaike.com/wiki-Java%20Programming";
+        String destination = "https://en.wanweibaike.com/wiki-philosophy";
+        String source = "https://en.wanweibaike.com/wiki-Java_(programming_language)";
 
-        testConjecture(destination, source, 20);
+        testConjecture(destination, source, 10);
     }
 
     /**
@@ -57,11 +63,7 @@ public class WikiPhilosophy {
 
             System.out.println("**" + elt.text() + "**");
             url = elt.attr("abs:href");
-
-            if (url.equals(destination)) {
-                System.out.println("Eureka!");
-                break;
-            }
+            break;
         }
     }
 

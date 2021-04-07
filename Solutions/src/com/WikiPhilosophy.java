@@ -1,11 +1,11 @@
 package com;
 
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 public class WikiPhilosophy {
 
@@ -26,11 +26,11 @@ public class WikiPhilosophy {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		
+
 		String destination = "https://en.wanweibaike.com/wiki-Philosophy";
-		String source = "https://en.wanweibaike.com/wiki-Java%20Programming";
+		String source = "https://en.wanweibaike.com/wiki-Java_(programming_language)";
 		
-		testConjecture(destination, source, 10);		
+		testConjecture(destination, source, 20);
 	}
 
 	/**

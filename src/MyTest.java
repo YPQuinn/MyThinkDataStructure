@@ -1,9 +1,15 @@
+import org.junit.Test;
+
+import java.time.Instant;
+
 /**
  * @author quinn
  * @create 2021-01-31 11:41
  */
-public class Test {
-    public static void main(String[] args) {
+
+public class MyTest {
+    @Test
+    public void test1() {
         long startTime = 0L;
         long endTime = 0L;
 
@@ -31,5 +37,11 @@ public class Test {
         }
         endTime = System.currentTimeMillis();
         System.out.println(endTime - startTime);
+    }
+
+    @Test
+    public void test2() {
+        Instant instant = Instant.ofEpochMilli(1236666987692L);
+        System.out.println(instant);
     }
 }
