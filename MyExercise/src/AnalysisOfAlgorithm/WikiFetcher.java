@@ -10,11 +10,12 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.time.Instant;
 
 
 public class WikiFetcher {
 	private long lastRequestTime = -1;
-	private long minInterval = 1000;
+	private long minInterval = 4000;
 
 	/**
 	 * Fetches and parses a URL string, returning a list of paragraph elements.
@@ -28,7 +29,7 @@ public class WikiFetcher {
 
 		// download and parse the document
 		Connection conn = Jsoup.connect(url);
-		Document doc = conn.timeout(5000).get();
+		Document doc = conn.get();
 
 		// select the content text and pull out the paragraphs.
 		Element content = doc.getElementById("mw-content-text");
@@ -71,7 +72,8 @@ public class WikiFetcher {
 			long nextRequestTime = lastRequestTime + minInterval;
 			if (currentTime < nextRequestTime) {
 				try {
-					//System.out.println("Sleeping until " + nextRequestTime);
+					Instant instant = Instant.ofEpochMilli(lastRequestTime);
+					System.out.println("Sleeping until " + instant.toString());
 					Thread.sleep(nextRequestTime - currentTime);
 				} catch (InterruptedException e) {
 					System.err.println("Warning: sleep interrupted in fetchWikipedia.");

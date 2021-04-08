@@ -32,10 +32,10 @@ public class WikiPhilosophy {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        String destination = "https://en.wanweibaike.com/wiki-philosophy";
+        String destination = "https://en.wanweibaike.com/wiki-Philosophy";
         String source = "https://en.wanweibaike.com/wiki-Java_(programming_language)";
 
-        testConjecture(destination, source, 10);
+        testConjecture(destination, source);
     }
 
     /**
@@ -45,10 +45,10 @@ public class WikiPhilosophy {
      * @param source
      * @throws IOException
      */
-    public static void testConjecture(String destination, String source, int limit) throws IOException {
+    public static void testConjecture(String destination, String source) throws IOException {
         // TODO: FILL THIS IN!
         String url = source;
-        for (int i = 0; i < limit; i++) {
+        while (true) {
             if (visited.contains(url)) {
                 System.err.println("We're in a loop, exiting.");
                 return;
@@ -63,7 +63,11 @@ public class WikiPhilosophy {
 
             System.out.println("**" + elt.text() + "**");
             url = elt.attr("abs:href");
-            break;
+
+            if (url.equals(destination)) {
+                System.out.println("Eureka!");
+                break;
+            }
         }
     }
 
